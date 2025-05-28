@@ -1,11 +1,13 @@
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+  display: flex;
+  flex-direction: column; /* or row, depending on layout */
+  justify-content: center; /* vertical centering */
+  align-items: center;     /* horizontal centering */
+  min-height: 100vh;       /* fill full height */
   margin: 0;
-  padding: 0;
-  background-color: #f9f9f9;
-  color: #333;
+  background-color: #9deef2;
 }
+
 
 header {
   background: #333;
@@ -15,7 +17,7 @@ header {
 }
 /* Navbar styles */
 .navbar {
-  background-color: #222;
+  background-color: #fbd7fc;
   padding: 0.5rem;
 }
 
