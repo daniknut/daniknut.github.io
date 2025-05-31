@@ -5,19 +5,19 @@ body {
   align-items: center;     /* horizontal centering */
   min-height: 100vh;       /* fill full height */
   margin: 0;
-  background-color: #9deef2;
+  background-color: #f5ddbd;
 }
 
 
 header {
-  background: #333;
-  color: white;
+  background: #eeb66e;
+  color: #f1c892;
   padding: 1rem;
   text-align: center;
 }
 /* Navbar styles */
 .navbar {
-  background-color: #fbd7fc;
+  background-color: #5eddf2;
   padding: 0.5rem;
 }
 
@@ -31,7 +31,7 @@ header {
 }
 
 .navbar a {
-  color: #fff;
+  color: #5eddf2;
   text-decoration: none;
   font-weight: bold;
   padding: 0.5rem 1rem;
@@ -39,7 +39,7 @@ header {
 }
 
 .navbar a:hover {
-  background-color: #444;
+  background-color: #0cb5d1;
   border-radius: 5px;
 }
 
@@ -58,4 +58,3 @@ footer {
   padding: 10px;
   font-size: 0.9rem;
 }
-
