@@ -1,3 +1,11 @@
+*{
+  margin:0px;
+  padding: 0px;
+  box-sizing: border-box;
+  color: white;
+  font: sans-serif;
+}
+
 body {
   display: flex;
   flex-direction: column; /* or row, depending on layout */
@@ -51,7 +59,7 @@ header {
   justify-content: center;
   flex-wrap: wrap;
   gap: 25px;
-  margin-top: 100px;
+  margin-top: 10px;
   background-color: #fac989;
 }
 
