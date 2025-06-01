@@ -11,13 +11,14 @@ body {
 
 header {
   background: #eeb66e;
-  color: #ffeed8;
+  color: #fffbf6;
   width: 100%;
   text-align: center;
 }
 /* Navbar styles */
 .navbar {
   background-color: #5eddf2;
+  padding: 20px;
   width: 100%;
 }
 
@@ -31,7 +32,7 @@ header {
 }
 
 .navbar a {
-  color: #5eddf2;
+  color: #00768b;
   text-decoration: none;
   font-weight: bold;
   padding: 0.5rem 1rem;
@@ -39,7 +40,8 @@ header {
 }
 
 .navbar a:hover {
-  background-color: #0cb5d1;
+  background-color: #006779;
+  color: #5eddf2;
   border-radius: 5px;
 }
 
