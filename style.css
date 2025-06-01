@@ -6,6 +6,7 @@ body {
   min-height: 100vh;       /* fill full height */
   margin: 0;
   background-color: #f5ddbd;
+  box-sizing: border-box;
 }
 
 
@@ -46,7 +47,6 @@ header {
 }
 
 .card-container {
-  box-sizing: border-box;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
