@@ -11,14 +11,14 @@ body {
 
 header {
   background: #eeb66e;
-  color: #f1c892;
-  padding: 1rem;
+  color: #ffeed8;
+  width: 100%;
   text-align: center;
 }
 /* Navbar styles */
 .navbar {
   background-color: #5eddf2;
-  padding: 0.5rem;
+  width: 100%;
 }
 
 .navbar ul {
@@ -56,5 +56,6 @@ footer {
   background: #5eddf2;
   text-align: center;
   padding: 10px;
+  width: 100%;
   font-size: 0.9rem;
 }
