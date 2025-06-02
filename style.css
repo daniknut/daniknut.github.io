@@ -49,6 +49,7 @@ header {
 
 .navbar {
   background-color: var(--navbar-background);
+  margin-top: 15px;
   padding: 20px;
   width: 100%;
 }
