@@ -3,6 +3,7 @@
   padding: 0px;
   box-sizing: border-box;
   color: rgb(0, 0, 0);
+  font-family: 'Roboto', sans-serif;
 }
 
 .roboto-one{
@@ -32,9 +33,9 @@ body {
 
 header {
   background: #eeb66e;
-  color: #fffbf6;
   width: 100%;
   text-align: center;
+
 }
 /* Navbar styles */
 .navbar {
