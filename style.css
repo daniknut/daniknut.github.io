@@ -4,11 +4,6 @@
   box-sizing: border-box;
   color: rgb(0, 0, 0);
   font-family: 'Roboto', sans-serif;
-
-  display: flex;
-  flex-direction: column; /* or row, depending on layout */
-  justify-content: center; /* vertical centering */
-  align-items: center;
 }
 
 .roboto-one{
