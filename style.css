@@ -124,7 +124,7 @@ section {
 /* === Headshot Image === */
 .headshot-image {
   width: 50%;
-  max-width: 300px;
+  max-width: 200px;
   border-radius: 5px;
   border: 2px solid var(--border-color);
   margin: 20px;
