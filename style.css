@@ -110,6 +110,7 @@ section {
 
 .headshot-image {
   width: 50%;
+  max-width: 200px;
   border-radius: 5px;
   border-color: black;
 }
