@@ -46,6 +46,7 @@ header {
 .navbar {
   background-color: #5eddf2;
   padding: 20px;
+  margin: 15px;
   width: 100%;
 }
 
@@ -59,11 +60,12 @@ header {
 }
 
 .navbar a {
-  color: #00768b;
+  color: #003e49;
   text-decoration: none;
   font-weight: bold;
   padding: 0.5rem 1rem;
   transition: background 0.3s;
+  font-size: medium;
 }
 
 .navbar a:hover {
@@ -115,7 +117,7 @@ section {
 
 .headshot-image {
   width: 50%;
-  max-width: 150px;
+  max-width: 200px;
   border-radius: 5px;
   border-color: black;
 }
