@@ -3,85 +3,98 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- <title>Danielle Knutson – Portfolio</title> -->
+  <title>Danielle Knutson – Portfolio</title>
+
+  <!-- Link to your external stylesheet -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Fonts: Roboto -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
   <!-- This is the top of the page -->
   <header>
     <h1>Danielle Knutson</h1>
-    <!-- Here is where you edit the nav bar -->
+
+    <!-- Navigation bar -->
     <nav class="navbar">
-       <ul> <!-- Un-ordered list-->
-       <!-- li represents list items -->
-        <!-- a is the anchor tag creating the hyperlink since href
-         sets values equal to a link/destination and the contents between the a are the words depicted-->
-       <li><a href="#about">About</a></li>
-       <li><a href="#work">Projects</a></li>
-       <li><a href="#contact">Contact</a></li>
-       </ul>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <!-- Main represents the rest of the page-->
+  <!-- Main content area -->
   <main>
-    <!-- id's are unique words that identify a section or element-->
+    <!-- About section -->
     <section id="about">
-      <h2>About Me</h2> <!-- h2 represents the second largest header size-->
-      <div style="display: flex; align-items: center;">
-        <!-- Section where the image is visible and fixed -->
-        <img src="Headshot.jpeg" alt="Headshot of Danielle Knutson" class = "headshot-image" style="margin-right: 20px;"/>
-        <p> <!-- p represents general paragraph style, however all types can be modified in css using their names-->
-          I'm an undergraduate student at the Massachusetts Institute of Technology (MIT) pursuing a Bachelor of Science in Computer Science and Engineering, with a strong foundation in both theoretical and applied aspects of computing. With a GPA of 4.8/5.0 and coursework in machine learning, algorithms, optimization, and data science, I thrive at the intersection of technical rigor and real-world impact.
-          My experiences range from machine learning research at the MIT Energy Initiative to developing quantum-based image processing methods at Arizona State University. I’ve also led hands-on projects like MIT Pokerbots, where I applied strategic modeling and algorithms to competitive gameplay.
-          Beyond research, I’ve served as a lab assistant, helping new students navigate programming challenges, and worked in industry as an associate consultant, contributing to database systems and vendor communication. I actively engage in professional development through groups like The CRWN and the MIT Undergraduate Practice Opportunities Program.
+      <h2>About Me</h2>
+      <div style="display: flex; align-items: center; flex-wrap: wrap;">
+        <!-- Headshot image -->
+        <img
+          src="Headshot.jpeg"
+          alt="Headshot of Danielle Knutson"
+          class="headshot-image"
+          style="margin-right: 20px;"
+        />
+
+        <!-- Paragraph about yourself -->
+        <p>
+          I'm an undergraduate student at the Massachusetts Institute of Technology (MIT) pursuing a Bachelor of Science in Computer Science and Engineering, with a strong foundation in both theoretical and applied aspects of computing. With a GPA of 4.8/5.0 and coursework in machine learning, algorithms, optimization, and data science, I thrive at the intersection of technical rigor and real-world impact.<br><br>
+
+          My experiences range from machine learning research at the MIT Energy Initiative to developing quantum-based image processing methods at Arizona State University. I’ve also led hands-on projects like MIT Pokerbots, where I applied strategic modeling and algorithms to competitive gameplay.<br><br>
+
+          Beyond research, I’ve served as a lab assistant, helping new students navigate programming challenges, and worked in industry as an associate consultant, contributing to database systems and vendor communication. I actively engage in professional development through groups like The CRWN and the MIT Undergraduate Practice Opportunities Program.<br><br>
+
           Passionate about building accessible, data-driven solutions, I’m always looking to collaborate on impactful tech and research projects.
         </p>
       </div>
-
     </section>
 
+    <!-- Projects section -->
     <section id="work">
       <h2>Projects & Work</h2>
       <div class="card-container">
-          <div class = "card">
-              <div class = "card-content">
-                <h1>Project 1</h1>
-                <p>project 1 blah blah blah</p>
-              </div>
+        <div class="card">
+          <div class="card-content">
+            <h1>Project 1</h1>
+            <p>Project 1 blah blah blah</p>
           </div>
-
-          <div class = "card">
-            <div class = "card-content">
-              <h1>Project 2</h1>
-              <p>project 2 blah blah blah</p>
-            </div>
-
         </div>
 
-        <div class = "card">
-          <div class = "card-content">
-            <h1>Project 3</h1>
-            <p>project 3 blah blah blah</p>
+        <div class="card">
+          <div class="card-content">
+            <h1>Project 2</h1>
+            <p>Project 2 blah blah blah</p>
           </div>
+        </div>
 
-      </div>
-
+        <div class="card">
+          <div class="card-content">
+            <h1>Project 3</h1>
+            <p>Project 3 blah blah blah</p>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- Contact section -->
     <section id="contact">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:daniknut@mit.edu">daniknut@mit.edu</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/danielle-knutson/">linkedin.com/in/danielle-knutson/</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/danielle-knutson/" target="_blank">linkedin.com/in/danielle-knutson/</a></p>
       <p>GitHub: <a href="https://github.com/daniknut" target="_blank">@daniknut</a></p>
     </section>
   </main>
-  <!-- is the bottom of the page-->
+
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Danielle Knutson</p>
   </footer>
