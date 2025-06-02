@@ -67,6 +67,7 @@ header {
   font-weight: bold;
   transition: background 0.3s;
   font-size: large;
+  padding: 20px;
 }
 
 .navbar a:hover {
