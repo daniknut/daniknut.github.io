@@ -134,7 +134,8 @@ header {
 }
 
 .card-content h2 {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  margin-top: 10px;
 }
 
 .card-content p {
@@ -182,6 +183,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: white;
 }
 
 .contact-card {
