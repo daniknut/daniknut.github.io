@@ -162,7 +162,15 @@ header {
 }
 .card:hover .card-bg {
   transform: scale(1.05);
-  filter: brightness(1.1);
+  filter: brightness(1.5);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 191, 80, 0.616); /* Change color/opacity as needed */
+  z-index: 2;
 }
 
 .card-bg {
