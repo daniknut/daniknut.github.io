@@ -18,6 +18,20 @@
 
 <body>
   <!-- This is the top of the page -->
+  <section class="collage-wrapper">
+    <div class="collage fade-in">
+      <img src="img1.jpeg" alt="..." />
+      <img src="img2.jpeg" alt="..." />
+      <img src="img3.jpeg" alt="..." />
+      <img src="img4.jpeg" alt="..." />
+      <img src="img5.jpeg" alt="..." />
+      <img src="img6.jpeg" alt="..." />
+      <img src="img7.jpeg" alt="..." />
+      <img src="img8.jpeg" alt="..." />
+      <img src="img9.jpeg" alt="..." />
+      <!-- Add more as needed -->
+    </div>
+  </section>
   <header>
     <h1>Danielle Knutson</h1>
 
@@ -142,5 +156,23 @@
   <footer>
     <p>&copy; 2025 Danielle Knutson</p>
   </footer>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const collage = document.querySelector('.collage');
+
+      // Fade in on load
+      setTimeout(() => {
+        collage.classList.add('visible');
+      }, 200);
+
+      // Fade out on scroll
+      window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        const maxScroll = 300; // Adjust based on how soon you want it to fade out
+        const opacity = Math.max(0, 1 - scrollY / maxScroll);
+        collage.style.opacity = opacity;
+      });
+    });
+  </script>
 </body>
 </html>

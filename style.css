@@ -203,3 +203,40 @@ footer {
   width: 100%;
   font-size: 0.9rem;
 }
+
+
+.collage-wrapper {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.collage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 2s ease, transform 2s ease;
+  position: sticky;
+  top: 0;
+  padding: 40px;
+  background: white;
+  z-index: 2;
+}
+
+.collage img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Fade-in trigger class */
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
