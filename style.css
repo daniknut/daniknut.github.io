@@ -184,7 +184,7 @@ header {
   background-position: center center;
   z-index: 1;
   filter: brightness(0.6);
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease;
 }
 
 .contact {
