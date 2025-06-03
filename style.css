@@ -161,7 +161,7 @@ header {
 }
 .card:hover .card-bg {
   transform: scale(1.05);
-  filter: brightness(0.8);
+  filter: brightness(1.1);
 }
 
 .card-bg {
