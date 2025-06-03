@@ -163,7 +163,7 @@ header {
 .card:hover .card-bg {
   transform: scale(1.05);
   filter: brightness(1.5);
-  background: rgba(255, 191, 80, 0.76);
+  background: rgba(80, 220, 255, 0.76);
 }
 
 .card::before {
