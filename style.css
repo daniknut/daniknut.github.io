@@ -8,7 +8,7 @@
   --navbar-hover-bg: #006779;
   --navbar-hover-text: #5eddf2;
   --card-background: #fbae48;
-  --card-text: #ffffff;
+  --card-text: #000000;
   --footer-background: #5eddf2;
   --border-color: black;
 }
@@ -28,6 +28,24 @@
   font-weight: 300;
   font-style: normal;
   font-variation-settings: "wdth" 100;
+}
+
+/* === Main & Sections === */
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+/* === Headshot Image === */
+.headshot-image {
+  width: 50%;
+  max-width: 200px;
+  border-radius: 5px;
+  border: 2px solid var(--border-color);
+  margin: 20px;
 }
 
 /* === Layout === */
@@ -114,23 +132,21 @@ header {
   margin-bottom: 20px;
 }
 
-/* === Main & Sections === */
-main {
-  padding: 20px;
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-section {
-  margin-bottom: 2rem;
+.contact-card {
+  width: 325px;
+  background-color: var(--card-background);
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 }
 
-/* === Headshot Image === */
-.headshot-image {
-  width: 50%;
-  max-width: 200px;
-  border-radius: 5px;
-  border: 2px solid var(--border-color);
-  margin: 20px;
-}
 
 /* === Footer === */
 footer {
