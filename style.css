@@ -113,7 +113,7 @@ header {
 
 .card {
   position: relative;
-  overflow: auto;
+  overflow:visible;
   border-radius: 16px;
   height: 300px;
   max-width: 400px;
