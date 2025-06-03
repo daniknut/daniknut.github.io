@@ -156,8 +156,12 @@ header {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
 }
 
+.card {
+  cursor: pointer;
+}
 .card:hover .card-bg {
   transform: scale(1.05);
+  filter: brightness(0.8);
 }
 
 .card-bg {
@@ -166,12 +170,11 @@ header {
   left: 0;
   height: 100%;
   width: 100%;
-  background-size: cover;         /* Ensures the image covers the card */
-  background-position: center;    /* Centers the image inside the card */
-  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
   z-index: 1;
-  filter: brightness(0.5);
-  transition: transform 0.3s ease;
+  filter: brightness(0.6);
+  transition: transform 0.5s ease-in-out;
 }
 
 .contact {
