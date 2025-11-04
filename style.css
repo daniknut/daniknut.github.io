@@ -348,3 +348,34 @@ main {
     height: 130px;
   }
 }
+.about-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem; /* space between image and text */
+  flex-wrap: wrap; /* allows stacking on small screens */
+}
+
+.about-photo {
+  width: 280px;
+  border-radius: 16px;
+  flex-shrink: 0;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+  }
+
+  .about-photo {
+    width: 200px;
+    margin-bottom: 1.5rem;
+  }
+}
+
