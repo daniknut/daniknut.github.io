@@ -151,7 +151,7 @@ main {
 /* Float the image container to the right so text wraps around it */
 .about-photo {
   float: right;
-  width: 260px;                      /* adjust size as you like */
+  width: 400px;                      /* adjust size as you like */
   margin: 0 0 1.5rem 1.5rem;         /* space on left + bottom */
 }
 
