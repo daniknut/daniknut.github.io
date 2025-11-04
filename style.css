@@ -143,35 +143,27 @@ main {
 
 /* About layout */
 
+/* Make about section a normal block container */
 .about-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.6fr);
-  gap: 2.25rem;
-  align-items: flex-start;
+  display: block;
 }
 
-
+/* Float the image container to the right so text wraps around it */
 .about-photo {
-  float: left;           /* makes text wrap around */
-  width: 220px;
-  margin: 0 1.5rem 1rem 0; /* space around the image */
-  border-radius: 12px;
+  float: right;
+  width: 260px;                      /* adjust size as you like */
+  margin: 0 0 1.5rem 1.5rem;         /* space on left + bottom */
 }
 
-@media (max-width: 700px) {
-  .about-photo {
-    float: none;         /* disable wrapping on small screens */
-    display: block;
-    margin: 0 auto 1.5rem;
-  }
-}
-
+/* Style the actual image */
 .headshot-image {
+  width: 100%;
   border-radius: 18px;
   border: 1px solid rgba(148, 163, 184, 0.5);
   box-shadow: 0 18px 40px rgba(15, 23, 42, 0.8);
 }
 
+/* About text */
 .about-text p {
   margin-top: 0;
   margin-bottom: 1rem;
@@ -337,17 +329,19 @@ main {
     gap: 0.85rem;
   }
 
-  .about-layout {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 1.5rem;
-  }
-
-  .about-photo {
-    justify-content: center;
-  }
-
   main {
     padding-inline: 1.25rem;
+  }
+
+  /* On smaller screens, stack the about image above the text */
+  .about-photo {
+    float: none;
+    width: 200px;
+    margin: 0 auto 1.5rem;
+  }
+
+  .about-layout {
+    display: block;
   }
 }
 
@@ -364,34 +358,3 @@ main {
     height: 130px;
   }
 }
-.about-container {
-  display: flex;
-  align-items: flex-start;
-  gap: 2rem; /* space between image and text */
-  flex-wrap: wrap; /* allows stacking on small screens */
-}
-
-.about-photo {
-  width: 280px;
-  border-radius: 16px;
-  flex-shrink: 0;
-}
-
-.about-text {
-  flex: 1;
-  min-width: 250px;
-}
-
-@media (max-width: 768px) {
-  .about-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: left;
-  }
-
-  .about-photo {
-    width: 200px;
-    margin-bottom: 1.5rem;
-  }
-}
-
