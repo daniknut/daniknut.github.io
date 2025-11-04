@@ -150,9 +150,20 @@ main {
   align-items: flex-start;
 }
 
+
 .about-photo {
-  display: flex;
-  justify-content: flex-start;
+  float: left;           /* makes text wrap around */
+  width: 220px;
+  margin: 0 1.5rem 1rem 0; /* space around the image */
+  border-radius: 12px;
+}
+
+@media (max-width: 700px) {
+  .about-photo {
+    float: none;         /* disable wrapping on small screens */
+    display: block;
+    margin: 0 auto 1.5rem;
+  }
 }
 
 .headshot-image {
