@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Danielle Knutson – Portfolio</title>
 
-  <!-- Link to your external stylesheet -->
+  <!-- External stylesheet -->
   <link rel="stylesheet" href="style.css" />
 
   <!-- Google Fonts: Roboto -->
@@ -17,8 +17,8 @@
 </head>
 
 <body>
-  <!-- This is the top of the page -->
-  <!-- <section class="collage-wrapper">
+  <!-- Optional collage hero (currently commented out)
+  <section class="collage-wrapper">
     <div class="collage fade-in">
       <img src="img1.jpeg" alt="..." />
       <img src="img2.jpeg" alt="..." />
@@ -30,134 +30,246 @@
       <img src="img8.jpeg" alt="..." />
       <img src="img9.jpeg" alt="..." />
     </div>
-  </section> -->
-  <header>
-    <h1>Danielle Knutson</h1>
+  </section>
+  -->
 
-    <!-- Navigation bar -->
-    <nav class="navbar">
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#work">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="branding">
+        <h1 class="site-title">Danielle Knutson</h1>
+        <p class="site-tagline">
+          Computer Science &amp; Engineering @ MIT · Data, Energy, &amp; Technology
+        </p>
+      </div>
+
+      <!-- Navigation bar -->
+      <nav class="navbar">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#work" class="nav-link">Projects</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <!-- Main content area -->
   <main>
     <!-- About section -->
-    <section id="about">
-      <h2>About me</h2>
-      <div style="display: flex; align-items: flex-start;">
-        <!-- Headshot image -->
-        <img
-          src="Headshot.jpeg"
-          alt="Headshot of Danielle Knutson"
-          class="headshot-image"
-          style="margin-right: 20px;"
-        />
+    <section id="about" class="section section-about">
+      <div class="section-header">
+        <h2 class="section-title">About Me</h2>
+      </div>
 
-        <!-- Paragraph about yourself -->
-        <p>
-          I'm an undergraduate student at the Massachusetts Institute of Technology (MIT) pursuing a Bachelor of Science in Computer Science and Engineering, with a strong foundation in both theoretical and applied aspects of computing. With a GPA of 4.8/5.0 and coursework in machine learning, algorithms, optimization, and data science, I thrive at the intersection of technical rigor and real-world impact.<br><br>
+      <div class="about-layout">
+        <div class="about-photo">
+          <img
+            src="Headshot.jpeg"
+            alt="Headshot of Danielle Knutson"
+            class="headshot-image"
+          />
+        </div>
 
-          My experiences range from machine learning research at the MIT Energy Initiative to developing quantum-based image processing methods at Arizona State University. I’ve also led hands-on projects like MIT Pokerbots, where I applied strategic modeling and algorithms to competitive gameplay.<br><br>
-
-          Beyond research, I’ve served as a lab assistant, helping new students navigate programming challenges, and worked in industry as an associate consultant, contributing to database systems and vendor communication. I actively engage in professional development through groups like The CRWN and the MIT Undergraduate Practice Opportunities Program.<br><br>
-
-          Passionate about building accessible, data-driven solutions, I’m always looking to collaborate on impactful tech and research projects.
-        </p>
+        <div class="about-text">
+          <p>
+            I’m an undergraduate student at the Massachusetts Institute of Technology (MIT)
+            pursuing a Bachelor of Science in Computer Science and Engineering, with a strong
+            foundation in both theoretical and applied aspects of computing. With a GPA of
+            4.8/5.0 and coursework in machine learning, algorithms, optimization, and data
+            science, I thrive at the intersection of technical rigor and real-world impact.
+          </p>
+          <p>
+            My experiences range from machine learning research at the MIT Energy Initiative
+            to developing quantum-based image processing methods at Arizona State University.
+            I’ve also led hands-on projects like MIT Pokerbots, where I applied strategic
+            modeling and algorithms to competitive gameplay.
+          </p>
+          <p>
+            Beyond research, I’ve served as a lab assistant, helping new students navigate
+            programming challenges, and worked in industry as an associate consultant,
+            contributing to database systems and vendor communication. I actively engage in
+            professional development through groups like The CRWN and the
+            MIT Undergraduate Practice Opportunities Program.
+          </p>
+          <p>
+            Passionate about building accessible, data-driven solutions, I’m always looking
+            to collaborate on impactful tech and research projects.
+          </p>
+        </div>
       </div>
     </section>
 
     <!-- Projects section -->
-    <section id="work">
-      <h2>Projects & Work</h2>
+    <section id="work" class="section section-work">
+      <div class="section-header">
+        <h2 class="section-title">Projects &amp; Work</h2>
+      </div>
+
       <div class="card-container">
-        <a href="https://github.com/vineetjnair9/DER_data_UROP" class="card-link" target="_blank">
-          <div class="card">
+        <!-- DER Project -->
+        <a
+          href="https://github.com/vineetjnair9/DER_data_UROP"
+          class="card-link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <article class="card">
             <div class="card-bg" style="background-image: url('output.png');"></div>
             <div class="card-content">
-              <h3>Distributed Energy Resource Dataset in California</h3>
-              <p>Developing DER and socioeconomic datasets. Applying statistical and machine learning methods such as linear, LASSO, Random Forest, and ridge regression to predict DER adoption based on socioeconomic factors at the county level. I also applied dimensionality reduction techniques such as PCA, tSNE, and UMAP to aid in clustering of counties with K-Means.</p>
+              <h3 class="card-title">Distributed Energy Resource Dataset in California</h3>
+              <p class="card-text">
+                Developing DER and socioeconomic datasets. Applying statistical and machine
+                learning methods such as linear, LASSO, Random Forest, and ridge regression
+                to predict DER adoption based on socioeconomic factors at the county level.
+                Also used dimensionality reduction techniques such as PCA, t-SNE, and UMAP
+                to aid in clustering of counties with K-Means.
+              </p>
             </div>
-          </div>
+          </article>
         </a>
 
-        <a href="https://docs.google.com/presentation/d/1A_v-qHuE6l08YG8w12SbnDPwyEq6GzY1gdFnIsTwSzg/edit?usp=sharing" class="card-link" target="_blank">
-          <div class="card">
+        <!-- Inspirit AI -->
+        <a
+          href="https://docs.google.com/presentation/d/1A_v-qHuE6l08YG8w12SbnDPwyEq6GzY1gdFnIsTwSzg/edit?usp=sharing"
+          class="card-link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <article class="card">
             <div class="card-bg" style="background-image: url('Inspirit_AI.png');"></div>
             <div class="card-content">
-              <h3>Inspirit AI Presentation</h3>
-              <p>Won first place at Inspirit AI by presenting a machine learning analysis on racial bias in the COMPAS criminal justice algorithm. Used logistic regression, Bernoulli NB, and Random Forest models to highlight disparities in sentencing predictions.</p>
+              <h3 class="card-title">Inspirit AI Presentation</h3>
+              <p class="card-text">
+                Won first place at Inspirit AI by presenting a machine learning analysis on
+                racial bias in the COMPAS criminal justice algorithm. Used logistic regression,
+                Bernoulli NB, and Random Forest models to highlight disparities in
+                sentencing predictions.
+              </p>
             </div>
-          </div>
+          </article>
         </a>
 
-        <a href="https://github.com/BryceF15/code-blooded-pokerbot" class="card-link" target="_blank">
-          <div class="card">
+        <!-- MIT PokerBots -->
+        <a
+          href="https://github.com/BryceF15/code-blooded-pokerbot"
+          class="card-link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <article class="card">
             <div class="card-bg" style="background-image: url('Pokerbots.jpeg');"></div>
             <div class="card-content">
-              <h3>MIT PokerBots</h3>
-              <p>Built a poker-playing bot in Python for MIT’s competitive PokerBots tournament. Engineered strategy adjustments under uncertainty and performed opponent modeling. Our team ranked in the top third out of all submissions.</p>
+              <h3 class="card-title">MIT PokerBots</h3>
+              <p class="card-text">
+                Built a poker-playing bot in Python for MIT’s competitive PokerBots tournament.
+                Engineered strategy adjustments under uncertainty and performed opponent modeling.
+                Our team ranked in the top third out of all submissions.
+              </p>
             </div>
-          </div>
+          </article>
         </a>
 
-        <a href="https://qft.my.canva.site/" class="card-link" target="_blank">
-          <div class="card">
+        <!-- Quantum Image Processing -->
+        <a
+          href="https://qft.my.canva.site/"
+          class="card-link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <article class="card">
             <div class="card-bg" style="background-image: url('Quantum.png');"></div>
             <div class="card-content">
-              <h3>Quantum Image Processing</h3>
-              <p>Interned at ASU’s SenSIP Lab to develop a quantum-enhanced image processing pipeline using a hybrid 2D Quantum Fourier Transform. Researched the performance of quantum methods versus classical techniques for efficiency in image analysis.</p>
+              <h3 class="card-title">Quantum Image Processing</h3>
+              <p class="card-text">
+                Interned at ASU’s SenSIP Lab to develop a quantum-enhanced image processing
+                pipeline using a hybrid 2D Quantum Fourier Transform. Researched the performance
+                of quantum methods versus classical techniques for efficiency in image analysis.
+              </p>
             </div>
-          </div>
+          </article>
         </a>
 
-        <a href="" class="card-link" target="_blank">
-          <div class="card">
+        <!-- Ratel Consulting -->
+        <a
+          href="#"
+          class="card-link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <article class="card">
             <div class="card-bg" style="background-image: url('Ratel.jpeg');"></div>
             <div class="card-content">
-              <h3>Ratel Consulting</h3>
-              <p>Supporting internal operations by building a user-friendly database with SQL, Excel, and Power BI. Streamlining workflows and enabling better data visibility for consulting teams working on strategic analyses.</p>
+              <h3 class="card-title">Ratel Consulting</h3>
+              <p class="card-text">
+                Supported internal operations by building a user-friendly database with SQL,
+                Excel, and Power BI. Streamlined workflows and enabled better data visibility
+                for consulting teams working on strategic analyses.
+              </p>
             </div>
-          </div>
+          </article>
         </a>
 
-        <a href="" class="card-link" target="_blank">
-          <div class="card">
+        <!-- Girls Who Code -->
+        <a
+          href="#"
+          class="card-link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <article class="card">
             <div class="card-bg" style="background-image: url('gwc.jpeg');"></div>
             <div class="card-content">
-              <h3>Girls Who Code Projects</h3>
-              <p>Created multiple web apps including a portfolio, personality quiz, and environmental awareness site using HTML, CSS, JavaScript, and Python. Gained foundational coding experience and published projects in the Girls Who Code catalog.</p>
+              <h3 class="card-title">Girls Who Code Projects</h3>
+              <p class="card-text">
+                Created multiple web apps including a portfolio, personality quiz, and
+                environmental awareness site using HTML, CSS, JavaScript, and Python. Gained
+                foundational coding experience and published projects in the Girls Who Code catalog.
+              </p>
             </div>
-          </div>
+          </article>
         </a>
       </div>
     </section>
 
     <!-- Contact section -->
-    <section id="contact">
-      <div class="card">
+    <section id="contact" class="section section-contact">
+      <div class="section-header">
+        <h2 class="section-title">Contact</h2>
+      </div>
+
+      <div class="contact-card card">
         <div class="card-bg" style="background-image: url('Contact.jpeg');"></div>
         <div class="card-content">
-          <h2>Contact</h2>
-          <p>Email: <a href="mailto:daniknut@mit.edu">daniknut@mit.edu</a></p>
-          <p>LinkedIn: <a href="https://www.linkedin.com/in/danielle-knutson/" target="_blank">linkedin.com/in/danielle-knutson/</a></p>
-          <p>GitHub: <a href="https://github.com/daniknut" target="_blank">@daniknut</a></p>
+          <p>
+            <strong>Email:</strong>
+            <a href="mailto:daniknut@mit.edu">daniknut@mit.edu</a>
+          </p>
+          <p>
+            <strong>LinkedIn:</strong>
+            <a href="https://www.linkedin.com/in/danielle-knutson/" target="_blank" rel="noopener noreferrer">
+              linkedin.com/in/danielle-knutson/
+            </a>
+          </p>
+          <p>
+            <strong>GitHub:</strong>
+            <a href="https://github.com/daniknut" target="_blank" rel="noopener noreferrer">
+              @daniknut
+            </a>
+          </p>
         </div>
       </div>
     </section>
   </main>
 
   <!-- Footer -->
-  <footer>
+  <footer class="site-footer">
     <p>&copy; 2025 Danielle Knutson</p>
   </footer>
+
   <script>
     window.addEventListener('DOMContentLoaded', () => {
       const collage = document.querySelector('.collage');
+      if (!collage) return;
 
       // Fade in on load
       setTimeout(() => {
