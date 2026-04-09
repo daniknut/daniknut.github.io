@@ -3,299 +3,335 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Danielle Knutson – Portfolio</title>
-
-  <!-- External stylesheet -->
-  <link rel="stylesheet" href="style.css" />
-
-  <!-- Google Fonts: Lexend -->
-  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <!-- Google Fonts: Roboto -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <title>Danielle Knutson | Data, Energy, and Technology</title>
+  <meta
+    name="description"
+    content="Portfolio website for Danielle Knutson, an MIT student focused on computer science, AI, data, and energy systems."
+  />
+  <meta name="theme-color" content="#f4efe6" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <!-- Optional collage hero (currently commented out)
-  <section class="collage-wrapper">
-    <div class="collage fade-in">
-      <img src="img1.jpeg" alt="..." />
-      <img src="img2.jpeg" alt="..." />
-      <img src="img3.jpeg" alt="..." />
-      <img src="img4.jpeg" alt="..." />
-      <img src="img5.jpeg" alt="..." />
-      <img src="img6.jpeg" alt="..." />
-      <img src="img7.jpeg" alt="..." />
-      <img src="img8.jpeg" alt="..." />
-      <img src="img9.jpeg" alt="..." />
-    </div>
-  </section>
-  -->
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <header class="site-header">
-    <div class="header-inner">
-      <div class="branding">
-        <h1 class="site-title">Danielle Knutson</h1>
-        <p class="site-tagline">
-          Computer Science - AI and Decision Making @ MIT · Data, Energy, &amp; Technology
-        </p>
-      </div>
+  <header class="site-header" id="top">
+    <div class="header-shell">
+      <a class="brand-mark" href="#top" aria-label="Danielle Knutson home">DK</a>
 
-      <!-- Navigation bar -->
-      <nav class="navbar">
-        <ul class="nav-list">
-          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-          <li class="nav-item"><a href="#work" class="nav-link">Projects</a></li>
-          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-navigation"
+        aria-label="Open navigation"
+      >
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" id="site-navigation" aria-label="Primary">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#contact" class="nav-link">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- Main content area -->
-  <main>
-    <!-- About section -->
-    <section id="about" class="section section-about">
-    <div class="section-header">
-      <h2 class="section-title">About Me</h2>
-    </div>
-  
-    <div class="about-layout">
-      <div class="about-photo">
-        <img
-          src="Headshot.jpg"
-          alt="Headshot of Danielle Knutson"
-          class="headshot-image"
-        />
-      </div>
-  
-      <div class="about-text">
-        <p>I’m an undergraduate at the Massachusetts Institute of Technology (MIT), studying Computer Science - AI and Decision Making. I’m especially interested in how data, energy systems, and cities intersect—and how we can use technology to build fairer, more resilient infrastructure.
-            Across my work, I like taking messy, real-world problems and turning them into clean, interpretable tools or insights. I’ve built large-scale datasets on distributed energy resources in California, designed models to understand where technologies like rooftop solar and EV charging are (and aren’t) being adopted, and explored how those patterns connect to equity and policy.
-            I’ve worked with
-            <ul>
-              <li>Using pre-trained LLMs to classify sentiments about the MBTA to have real-time feedback about service disruptions</li>
-              <li>MIT Energy Initiative (MITEI) on data-driven energy and climate questions</li>
-              <li>Arizona State University’s SenSIP Lab on quantum-enhanced image processing</li>
-            </ul>
-           <p></p>
-           <p> I enjoy projects where I get to move between modeling, implementation, and storytelling—whether that’s writing Python pipelines, visualizing results, or presenting to non-technical audiences.
-            Outside of research, I’ve been a teaching assistant for MIT’s introductory CS course, teaching a recitation, helping new programmers debug code, and building confidence. I’ve also worked in industry as an associate consultant, supporting database design, internal tooling, and communication with external partners.
-            When I’m not in front of a terminal, you can usually find me dancing, tinkering with side projects, or planning the next thing I want to learn. I’m always excited to collaborate on projects at the intersection of data, energy, and urban systems—especially when there’s a clear path from technical work to real-world impact.
-            </p>
-      </div>
-    </div>
-  </section>
+  <main id="main-content">
+    <section class="hero">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">MIT · Computer Science and Engineering</p>
+        <h1>Danielle Knutson</h1>
+        <p class="hero-lead">
+          I build data-driven tools and research workflows across energy, infrastructure,
+          and applied AI.
+        </p>
+        <p class="hero-summary">
+          My work sits between technical implementation and real-world decision-making:
+          machine learning, distributed energy resources, data products, and clear
+          stakeholder-facing communication.
+        </p>
 
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">View Projects</a>
+          <a class="button button-secondary" href="mailto:daniknut@mit.edu">Email Me</a>
+        </div>
 
-    <!-- Projects section -->
-    <section id="work" class="section section-work">
-      <div class="section-header">
-        <h2 class="section-title">Projects &amp; Work</h2>
+        <ul class="contact-strip" aria-label="Contact links">
+          <li><a href="mailto:daniknut@mit.edu">daniknut@mit.edu</a></li>
+          <li><a href="tel:+14158506406">415-850-6406</a></li>
+          <li><a href="https://www.linkedin.com/in/danielle-knutson/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a href="https://github.com/daniknut" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        </ul>
       </div>
 
-      <div class="card-container">
-        <!--classify sentiments about the MBTA-->
-        <a
-          href="#"
-          class="card-link"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <article class="card">
-            <div class="card-bg" style="background-image: url('mbta_sentiment.png');"></div>
-            <div class="card-content">
-              <h3 class="card-title">Sentiment on the Line – MBTA</h3>
-              <p class="card-text">
-                Analyzing Reddit posts about the MBTA and linking rider sentiment to real
-                service alerts and weather conditions. Built a pipeline for sentiment
-                classification and topic clustering to understand when and why the rider
-                frustration spikes, and how it connects to reliability and communication.
-              </p>
-            </div>
-          </article>
-        </a>
-
-        <!-- Ratel Consulting -->
-        <a
-          href="#"
-          class="card-link"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <article class="card">
-            <div class="card-bg" style="background-image: url('Ratel.jpeg');"></div>
-            <div class="card-content">
-              <h3 class="card-title">Ratel Consulting</h3>
-              <p class="card-text">
-                Supported internal operations by building a user-friendly database with SQL,
-                Excel, and Power BI. Streamlined workflows and enabled better data visibility
-                for consulting teams working on strategic analyses.
-              </p>
-            </div>
-          </article>
-        </a>
-        
-        <!-- DER Project -->
-        <a
-          href="https://github.com/vineetjnair9/DER_data_UROP"
-          class="card-link"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <article class="card">
-            <div class="card-bg" style="background-image: url('output.png');"></div>
-            <div class="card-content">
-              <h3 class="card-title">Distributed Energy Resource Dataset in California</h3>
-              <p class="card-text">
-                Developing DER and socioeconomic datasets. Applying statistical and machine
-                learning methods such as linear, LASSO, Random Forest, and ridge regression
-                to predict DER adoption based on socioeconomic factors at the county level.
-                Also used dimensionality reduction techniques such as PCA, t-SNE, and UMAP
-                to aid in clustering of counties with K-Means.
-              </p>
-            </div>
-          </article>
-        </a>
-
-        <!-- Quantum Image Processing -->
-        <a
-          href="https://qft.my.canva.site/"
-          class="card-link"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <article class="card">
-            <div class="card-bg" style="background-image: url('Quantum.png');"></div>
-            <div class="card-content">
-              <h3 class="card-title">Quantum Image Processing</h3>
-              <p class="card-text">
-                Interned at ASU’s SenSIP Lab to develop a quantum-enhanced image processing
-                pipeline using a hybrid 2D Quantum Fourier Transform. Researched the performance
-                of quantum methods versus classical techniques for efficiency in image analysis.
-              </p>
-            </div>
-          </article>
-        </a>
-
-        <!-- Inspirit AI -->
-        <a
-          href="https://docs.google.com/presentation/d/1A_v-qHuE6l08YG8w12SbnDPwyEq6GzY1gdFnIsTwSzg/edit?usp=sharing"
-          class="card-link"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <article class="card">
-            <div class="card-bg" style="background-image: url('Inspirit_AI.png');"></div>
-            <div class="card-content">
-              <h3 class="card-title">Inspirit AI Presentation</h3>
-              <p class="card-text">
-                Won first place at Inspirit AI by presenting a machine learning analysis on
-                racial bias in the COMPAS criminal justice algorithm. Used logistic regression,
-                Bernoulli NB, and Random Forest models to highlight disparities in
-                sentencing predictions.
-              </p>
-            </div>
-          </article>
-        </a>
-
-        <!-- MIT PokerBots -->
-        <a
-          href="https://github.com/BryceF15/code-blooded-pokerbot"
-          class="card-link"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <article class="card">
-            <div class="card-bg" style="background-image: url('Pokerbots.jpeg');"></div>
-            <div class="card-content">
-              <h3 class="card-title">MIT PokerBots</h3>
-              <p class="card-text">
-                Built a poker-playing bot in Python for MIT’s competitive PokerBots tournament.
-                Engineered strategy adjustments under uncertainty and performed opponent modeling.
-                Our team ranked in the top third out of all submissions.
-              </p>
-            </div>
-          </article>
-        </a>
-        <!-- Girls Who Code -->
-        <a
-          href="#"
-          class="card-link"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <article class="card">
-            <div class="card-bg" style="background-image: url('gwc.jpeg');"></div>
-            <div class="card-content">
-              <h3 class="card-title">Girls Who Code Projects</h3>
-              <p class="card-text">
-                Created multiple web apps including a portfolio, personality quiz, and
-                environmental awareness site using HTML, CSS, JavaScript, and Python. Gained
-                foundational coding experience and published projects in the Girls Who Code catalog.
-              </p>
-            </div>
-          </article>
-        </a>
+      <div class="hero-visual reveal">
+        <div class="portrait-frame">
+          <img src="assets/images/Headshot.jpg" alt="Portrait of Danielle Knutson" />
+        </div>
+        <div class="hero-note">
+          <p class="hero-note-label">Current Focus</p>
+          <p>Data systems, energy adoption analysis, LLM-enabled interfaces, and reliable product workflows.</p>
+        </div>
       </div>
     </section>
 
-    <!-- Contact section -->
-    <section id="contact" class="section section-contact">
-      <div class="section-header">
-        <h2 class="section-title">Contact</h2>
+    <section class="section reveal" id="about">
+      <div class="section-heading">
+        <p class="section-kicker">About</p>
+        <h2>Technical work with a policy and infrastructure lens.</h2>
       </div>
 
-      <div class="contact-card card">
-        <div class="card-bg" style="background-image: url('Contact.jpeg');"></div>
-        <div class="card-content">
+      <div class="about-grid">
+        <div class="panel prose-panel">
           <p>
-            <strong>Email:</strong>
-            <a href="mailto:daniknut@mit.edu">daniknut@mit.edu</a>
+            I am a computer science student at MIT interested in how data, software,
+            and AI can make large systems more understandable and more useful.
           </p>
           <p>
-            <strong>LinkedIn:</strong>
-            <a href="https://www.linkedin.com/in/danielle-knutson/" target="_blank" rel="noopener noreferrer">
-              linkedin.com/in/danielle-knutson/
-            </a>
+            A recurring theme in my work is turning messy operational or research data into
+            something people can actually use: a reproducible workflow, an interpretable
+            model, a decision-support interface, or a cleaner story for non-technical teams.
           </p>
           <p>
-            <strong>GitHub:</strong>
-            <a href="https://github.com/daniknut" target="_blank" rel="noopener noreferrer">
-              @daniknut
-            </a>
+            Most of my recent work has centered on energy systems, distributed energy
+            resources, transportation sentiment analysis, and technical tooling that helps
+            people explore patterns rather than just collect outputs.
           </p>
+        </div>
+
+        <div class="panel facts-panel">
+          <ul class="fact-list">
+            <li>
+              <span class="fact-label">School</span>
+              <span class="fact-value">MIT, B.S. in Computer Science and Engineering</span>
+            </li>
+            <li>
+              <span class="fact-label">Timeline</span>
+              <span class="fact-value">September 2023 to May 2027</span>
+            </li>
+            <li>
+              <span class="fact-label">GPA</span>
+              <span class="fact-value">4.9 / 5.0</span>
+            </li>
+            <li>
+              <span class="fact-label">Interests</span>
+              <span class="fact-value">Energy systems, applied ML, data products, LLM applications</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="experience">
+      <div class="section-heading">
+        <p class="section-kicker">Experience</p>
+        <h2>Recent roles in operations, research, teaching, and consulting.</h2>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-item panel">
+          <div class="timeline-meta">
+            <p class="timeline-date">June 2026 to Present</p>
+            <p class="timeline-location">Remote</p>
+          </div>
+          <div class="timeline-content">
+            <h3>Program Operations Intern</h3>
+            <p class="timeline-org">ICF</p>
+            <ul>
+              <li>Support program operations and client delivery through data analysis, reporting, and documentation tied to operational tools and project workflows.</li>
+              <li>Work with structured datasets and internal systems to monitor deliverables, organize program information, and support process improvements across cross-functional teams.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item panel">
+          <div class="timeline-meta">
+            <p class="timeline-date">September 2025 to Present</p>
+            <p class="timeline-location">Cambridge, MA</p>
+          </div>
+          <div class="timeline-content">
+            <h3>Teaching Assistant</h3>
+            <p class="timeline-org">MIT Electrical Engineering and Computer Science Department</p>
+            <ul>
+              <li>Lead and support a team of about 10 lab assistants who staff office hours, keeping them aligned on course material and common student issues.</li>
+              <li>Develop and review homework infrastructure by writing test cases, validating assignment code, and improving assignment clarity and usability.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item panel">
+          <div class="timeline-meta">
+            <p class="timeline-date">September 2024 to December 2025</p>
+            <p class="timeline-location">Cambridge, MA</p>
+          </div>
+          <div class="timeline-content">
+            <h3>Data Science Researcher</h3>
+            <p class="timeline-org">MIT Energy Initiative</p>
+            <ul>
+              <li>Built and analyzed distributed energy resource datasets using statistical and machine learning methods to study adoption patterns across solar, storage, EV charging, and related grid technologies.</li>
+              <li>Performed data curation, feature construction, and exploratory analysis on demographic, environmental, and infrastructure variables to support DER-rich grid studies.</li>
+              <li>Developed reproducible workflows for regression, clustering, and synthetic data generation to improve the quality and usability of a novel DER research database.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item panel">
+          <div class="timeline-meta">
+            <p class="timeline-date">June 2025 to August 2025</p>
+            <p class="timeline-location">Cambridge, MA</p>
+          </div>
+          <div class="timeline-content">
+            <h3>Associate Consultant</h3>
+            <p class="timeline-org">Ratel Consulting</p>
+            <ul>
+              <li>Contributed to a user-facing database project centered on electric vehicle and battery supply chain data, spanning battery cells, production processes, and manufacturer relationships.</li>
+              <li>Worked with SQL, structured datasets, and external stakeholders to support data organization, vendor communication, and business-facing decision-making.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section reveal" id="projects">
+      <div class="section-heading">
+        <p class="section-kicker">Projects</p>
+        <h2>Selected technical work.</h2>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card panel">
+          <div class="project-media" style="background-image: linear-gradient(135deg, rgba(17, 24, 39, 0.25), rgba(11, 78, 93, 0.8)), url('assets/images/output.png');"></div>
+          <div class="project-copy">
+            <p class="project-date">May 2026 to Present</p>
+            <h3>DER Decision Support Platform</h3>
+            <p class="project-stack">Full-stack · APIs · LLMs · Cloud</p>
+            <p>
+              Building a cloud-based application for exploring distributed energy resources
+              and demographic patterns across regions through an interactive decision-support interface.
+            </p>
+            <ul>
+              <li>Designed backend APIs and data models for regional analysis and predictive insights.</li>
+              <li>Integrated a grounded LLM workflow to generate stakeholder-facing summaries from retrieved project data and model outputs.</li>
+              <li>Implemented testing, deployment workflows, and documentation to support reliability and future extension.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project-card panel">
+          <div class="project-media project-media-accent"></div>
+          <div class="project-copy">
+            <p class="project-date">March 2026</p>
+            <h3>Retrieval-Augmented Chatbot</h3>
+            <p class="project-stack">Python · Gradio · LLMs · Embeddings</p>
+            <p>
+              Built a retrieval-augmented chatbot that answers questions using a curated
+              knowledge base of personal writing and project materials.
+            </p>
+            <ul>
+              <li>Implemented data cleaning, chunking, embedding-based retrieval, and prompt grounding.</li>
+              <li>Built an interactive Gradio interface suitable for lightweight end-user use.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project-card panel">
+          <div class="project-media" style="background-image: linear-gradient(135deg, rgba(17, 24, 39, 0.25), rgba(109, 40, 87, 0.75)), url('assets/images/Contact.jpeg');"></div>
+          <div class="project-copy">
+            <p class="project-date">December 2025</p>
+            <h3>Sentiment on the Line -- MBTA</h3>
+            <p class="project-stack">NLP · LLMs · Python</p>
+            <p>
+              Built an end-to-end pipeline to collect and clean Reddit posts about the MBTA,
+              classify sentiment, and cluster topics around rider frustration.
+            </p>
+            <ul>
+              <li>Connected sentiment trends to service alerts and weather data to contextualize disruptions.</li>
+              <li>Used topic and time-based analysis to explore patterns in reliability and communication.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section reveal" id="skills">
+      <div class="section-heading">
+        <p class="section-kicker">Skills</p>
+        <h2>Languages, tools, and platforms I use regularly.</h2>
+      </div>
+
+      <div class="skills-grid">
+        <article class="panel skill-panel">
+          <h3>Languages</h3>
+          <ul class="tag-list">
+            <li>Python</li>
+            <li>SQL</li>
+            <li>JavaScript</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>R</li>
+            <li>Julia</li>
+          </ul>
+        </article>
+
+        <article class="panel skill-panel">
+          <h3>Libraries and Frameworks</h3>
+          <ul class="tag-list">
+            <li>PyTorch</li>
+            <li>Pandas</li>
+            <li>NumPy</li>
+            <li>OpenCV</li>
+            <li>Gradio</li>
+            <li>Qiskit</li>
+          </ul>
+        </article>
+
+        <article class="panel skill-panel">
+          <h3>Tools and Platforms</h3>
+          <ul class="tag-list">
+            <li>Git</li>
+            <li>Power BI</li>
+            <li>REST APIs</li>
+            <li>Cloud Deployment</li>
+            <li>Testing Workflows</li>
+            <li>Data Visualization</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section reveal" id="contact">
+      <div class="section-heading">
+        <p class="section-kicker">Contact</p>
+        <h2>Open to collaboration across data, energy, and applied AI work.</h2>
+      </div>
+
+      <div class="panel contact-panel">
+        <p>
+          The fastest way to reach me is by email. I’m also available on LinkedIn and GitHub.
+        </p>
+        <div class="contact-grid">
+          <a href="mailto:daniknut@mit.edu">daniknut@mit.edu</a>
+          <a href="tel:+14158506406">415-850-6406</a>
+          <a href="https://www.linkedin.com/in/danielle-knutson/" target="_blank" rel="noopener noreferrer">linkedin.com/in/danielle-knutson</a>
+          <a href="https://github.com/daniknut" target="_blank" rel="noopener noreferrer">github.com/daniknut</a>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer">
-    <p>&copy; 2025 Danielle Knutson</p>
+    <p>&copy; <span id="year"></span> Danielle Knutson</p>
   </footer>
 
-  <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      const collage = document.querySelector('.collage');
-      if (!collage) return;
-
-      // Fade in on load
-      setTimeout(() => {
-        collage.classList.add('visible');
-      }, 200);
-
-      // Fade out on scroll
-      window.addEventListener('scroll', () => {
-        const scrollY = window.scrollY;
-        const maxScroll = 300; // Adjust based on how soon you want it to fade out
-        const opacity = Math.max(0, 1 - scrollY / maxScroll);
-        collage.style.opacity = opacity;
-      });
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
