@@ -2,8 +2,6 @@
   --bg: #081a2f;
   --bg-deep: #05101e;
   --surface: rgba(15, 30, 52, 0.82);
-  --surface-strong: rgba(20, 39, 66, 0.94);
-  --surface-tint: rgba(214, 196, 167, 0.12);
   --text: #f4efe6;
   --muted: #d7c2a0;
   --muted-soft: #a7b6c8;
@@ -12,13 +10,11 @@
   --accent: #d7c2a0;
   --accent-deep: #b79a71;
   --accent-soft: rgba(215, 194, 160, 0.12);
-  --warm: #e1c59b;
   --shadow-lg: 0 30px 80px rgba(0, 0, 0, 0.28);
   --shadow-md: 0 18px 44px rgba(0, 0, 0, 0.22);
   --radius-xl: 34px;
   --radius-lg: 26px;
   --radius-md: 18px;
-  --radius-sm: 14px;
   --content-width: min(1160px, calc(100vw - 2rem));
 }
 
@@ -292,7 +288,6 @@ main,
 .project-date,
 .timeline-date,
 .timeline-location,
-.hero-note-label,
 .project-stack,
 .metric-label {
   font-size: 0.78rem;
@@ -305,7 +300,6 @@ main,
 .section-kicker,
 .project-date,
 .timeline-date,
-.hero-note-label,
 .project-stack,
 .metric-label {
   color: var(--accent);
@@ -459,14 +453,6 @@ main,
   overflow: visible;
 }
 
-.portrait-frame::before {
-  background:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
-  background-size: 28px 28px;
-}
-
-
 .portrait-centerpiece {
   position: relative;
   z-index: 4;
@@ -491,7 +477,7 @@ main,
 .frame-postcards .postcard-2 {
   top: -3.3rem;
   left: -8.1rem;
-  transform: rotate(deg);
+  transform: rotate(6deg);
   z-index: 2;
 }
 
@@ -553,26 +539,6 @@ main,
   object-position: center center;
   border-radius: 20px;
   filter: none;
-}
-
-.hero-note {
-  position: absolute;
-  left: 1.2rem;
-  right: 1.2rem;
-  bottom: 1.2rem;
-  z-index: 2;
-  max-width: 18rem;
-  margin-left: auto;
-  padding: 1rem 1.05rem;
-  border-radius: 20px;
-  background: rgba(244, 239, 230, 0.92);
-  border: 1px solid rgba(244, 239, 230, 0.16);
-  box-shadow: var(--shadow-md);
-  color: #1e2a32;
-}
-
-.hero-note p:last-child {
-  margin-bottom: 0;
 }
 
 .section {
@@ -1038,13 +1004,6 @@ main,
 
   .hero h1 {
     font-size: clamp(3rem, 15vw, 4.4rem);
-  }
-
-  .hero-note {
-    left: 0.8rem;
-    right: 0.8rem;
-    bottom: 0.8rem;
-    max-width: none;
   }
 
   .portrait-centerpiece,
