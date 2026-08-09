@@ -769,7 +769,7 @@ main,
   font-weight: 800;
 }
 
-.entry-body > p:not(.entry-org):not(.entry-note) {
+.entry-body > p:not(.entry-org) {
   color: #d7deea;
 }
 
@@ -824,14 +824,6 @@ main,
 .entry-links a:hover::after,
 .entry-links a:focus-visible::after {
   transform: translateX(3px);
-}
-
-.entry-note {
-  margin: 1.1rem 0 0;
-  padding-left: 0.85rem;
-  border-left: 2px solid rgba(244, 239, 230, 0.14);
-  color: var(--muted-soft);
-  font-size: 0.92rem;
 }
 
 .entry-media {
