@@ -654,6 +654,17 @@ main,
   color: var(--text);
 }
 
+.fact-value a {
+  color: var(--accent);
+  text-decoration-color: rgba(215, 194, 160, 0.45);
+  text-underline-offset: 2px;
+}
+
+.fact-value a:hover,
+.fact-value a:focus-visible {
+  text-decoration-color: var(--accent);
+}
+
 /* ---------- Work: threads ---------- */
 
 .threads {
