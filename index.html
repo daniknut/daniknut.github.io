@@ -63,8 +63,7 @@
 
       <nav class="site-nav" id="site-navigation" aria-label="Primary">
         <a href="#about" class="nav-link">About</a>
-        <a href="#experience" class="nav-link">Experience</a>
-        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#work" class="nav-link">Work</a>
         <a href="#skills" class="nav-link">Skills</a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
@@ -88,7 +87,7 @@
           </p>
 
           <div class="hero-actions">
-            <a class="button button-primary" href="#projects">View Projects</a>
+            <a class="button button-primary" href="#work">View Work</a>
             <a class="button button-secondary" href="mailto:daniknut@mit.edu">Email Me</a>
           </div>
 
@@ -189,134 +188,264 @@
       </div>
     </section>
 
-    <section class="section reveal" id="experience">
+    <section class="section reveal" id="work">
       <div class="section-heading">
-        <p class="section-kicker">Experience</p>
-        <h2>Recent roles in operations, research, teaching, and consulting.</h2>
+        <p class="section-kicker">Work</p>
+        <h2>Three threads I keep pulling on.</h2>
+        <p class="section-intro">
+          Roles and the things I built in them, grouped by the question they were
+          trying to answer rather than by whether they came with a paycheck.
+        </p>
       </div>
 
-      <div class="timeline">
-        <article class="timeline-item panel">
-          <div class="timeline-meta">
-            <p class="timeline-date">June 2026 to Present</p>
-            <p class="timeline-location">Remote</p>
-          </div>
-          <div class="timeline-content">
-            <h3>Program Operations Intern</h3>
-            <p class="timeline-org">ICF</p>
-            <ul>
-              <li>Support program operations and client delivery through data analysis, reporting, and documentation tied to operational tools and project workflows.</li>
-              <li>Work with structured datasets and internal systems to monitor deliverables, organize program information, and support process improvements across cross-functional teams.</li>
-            </ul>
+      <div class="threads">
+        <!-- ================= THREAD 01 ================= -->
+        <article class="thread" id="energy">
+          <header class="thread-header">
+            <p class="thread-index">01</p>
+            <h3>Energy systems and the grid</h3>
+            <p class="thread-framing">
+              Started as a research question about who adopts distributed energy resources
+              and who does not. Turned into a dataset, then models, then a tool other people
+              could use, then industry work on the supply chains and programs behind it.
+            </p>
+          </header>
+
+          <div class="thread-entries">
+            <article class="entry panel">
+              <div class="entry-meta">
+                <p class="entry-kind">Internship</p>
+                <p class="entry-date">June 2026 — Present</p>
+                <p class="entry-location">Remote</p>
+              </div>
+              <div class="entry-body">
+                <h4>Program Operations Intern</h4>
+                <p class="entry-org">ICF</p>
+                <ul>
+                  <li>Support program operations and client delivery through data analysis, reporting, and documentation tied to operational tools and project workflows.</li>
+                  <li>Work with structured datasets and internal systems to monitor deliverables, organize program information, and support process improvements across cross-functional teams.</li>
+                </ul>
+                <p class="entry-note">Client work — code and data are not public. Happy to walk through the approach.</p>
+              </div>
+            </article>
+
+            <article class="entry panel">
+              <div class="entry-meta">
+                <p class="entry-kind">Project</p>
+                <p class="entry-date">May 2026 — Present</p>
+                <p class="entry-location">Cambridge, MA</p>
+              </div>
+              <div class="entry-body">
+                <h4>DER Decision Support Platform</h4>
+                <p class="entry-org">Full-stack · APIs · LLMs · Cloud</p>
+                <p>
+                  A cloud-based application for exploring distributed energy resources and
+                  demographic patterns across regions through an interactive decision-support
+                  interface — the product layer on top of the MITEI research below.
+                </p>
+                <ul>
+                  <li>Designed backend APIs and data models for regional analysis and predictive insights.</li>
+                  <li>Integrated a grounded LLM workflow to generate stakeholder-facing summaries from retrieved project data and model outputs.</li>
+                  <li>Implemented testing, deployment workflows, and documentation to support reliability and future extension.</li>
+                </ul>
+                <!-- TODO: add repo / demo / screenshot when ready to share
+                <ul class="entry-links">
+                  <li><a href="" target="_blank" rel="noopener noreferrer">Repository</a></li>
+                  <li><a href="" target="_blank" rel="noopener noreferrer">Live demo</a></li>
+                </ul>
+                -->
+              </div>
+            </article>
+
+            <article class="entry panel">
+              <div class="entry-meta">
+                <p class="entry-kind">Consulting</p>
+                <p class="entry-date">June 2025 — August 2025</p>
+                <p class="entry-location">Cambridge, MA</p>
+              </div>
+              <div class="entry-body">
+                <h4>Associate Consultant</h4>
+                <p class="entry-org">Ratel Consulting</p>
+                <ul>
+                  <li>Contributed to a user-facing database project centered on electric vehicle and battery supply chain data, spanning battery cells, production processes, and manufacturer relationships.</li>
+                  <li>Worked with SQL, structured datasets, and external stakeholders to support data organization, vendor communication, and business-facing decision-making.</li>
+                </ul>
+                <p class="entry-note">Client work — database is internal. Happy to walk through the schema design and tradeoffs.</p>
+              </div>
+            </article>
+
+            <article class="entry panel entry-has-media">
+              <div class="entry-meta">
+                <p class="entry-kind">Research</p>
+                <p class="entry-date">September 2024 — December 2025</p>
+                <p class="entry-location">Cambridge, MA</p>
+              </div>
+              <div class="entry-body">
+                <h4>Data Science Researcher</h4>
+                <p class="entry-org">MIT Energy Initiative</p>
+                <ul>
+                  <li>Built and analyzed distributed energy resource datasets using statistical and machine learning methods to study adoption patterns across solar, storage, EV charging, and related grid technologies.</li>
+                  <li>Performed data curation, feature construction, and exploratory analysis on demographic, environmental, and infrastructure variables to support DER-rich grid studies.</li>
+                  <li>Developed reproducible workflows for regression, clustering, and synthetic data generation to improve the quality and usability of a novel DER research database.</li>
+                </ul>
+                <!-- The old link (github.com/vineetjnair9/DER_data_UROP) returns 404 —
+                     the repo is private or was moved. Restore with a working URL,
+                     or point at your own fork / a public mirror. -->
+                <!--
+                <ul class="entry-links">
+                  <li>
+                    <a href="" target="_blank" rel="noopener noreferrer">Repository</a>
+                  </li>
+                </ul>
+                -->
+              </div>
+              <figure class="entry-media">
+                <img
+                  src="assets/images/output.webp"
+                  alt="Map of California counties shaded by cluster assignment"
+                  width="735"
+                  height="804"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <!-- TODO: confirm this caption is accurate -->
+                <figcaption>
+                  California counties grouped by K-means clustering over DER adoption
+                  and socioeconomic features.
+                </figcaption>
+              </figure>
+            </article>
           </div>
         </article>
 
-        <article class="timeline-item panel">
-          <div class="timeline-meta">
-            <p class="timeline-date">September 2025 to Present</p>
-            <p class="timeline-location">Cambridge, MA</p>
-          </div>
-          <div class="timeline-content">
-            <h3>Teaching Assistant</h3>
-            <p class="timeline-org">MIT Electrical Engineering and Computer Science Department</p>
-            <ul>
-              <li>Lead and support a team of about 10 lab assistants who staff office hours, keeping them aligned on course material and common student issues.</li>
-              <li>Develop and review homework infrastructure by writing test cases, validating assignment code, and improving assignment clarity and usability.</li>
-            </ul>
+        <!-- ================= THREAD 02 ================= -->
+        <article class="thread" id="applied-ai">
+          <header class="thread-header">
+            <p class="thread-index">02</p>
+            <h3>Applied AI and language</h3>
+            <p class="thread-framing">
+              Using language models on messy, real text — public complaints, personal
+              archives — where the interesting part is grounding the output in something
+              verifiable rather than letting the model freelance.
+            </p>
+          </header>
+
+          <div class="thread-entries">
+            <article class="entry panel">
+              <div class="entry-meta">
+                <p class="entry-kind">Project</p>
+                <p class="entry-date">March 2026</p>
+              </div>
+              <div class="entry-body">
+                <h4>Retrieval-Augmented Chatbot</h4>
+                <p class="entry-org">Python · Gradio · LLMs · Embeddings</p>
+                <p>
+                  A retrieval-augmented chatbot that answers questions using a curated
+                  knowledge base of personal writing and project materials.
+                </p>
+                <ul>
+                  <li>Implemented data cleaning, chunking, embedding-based retrieval, and prompt grounding.</li>
+                  <li>Built an interactive Gradio interface suitable for lightweight end-user use.</li>
+                </ul>
+                <!-- TODO: add repo and/or a hosted Gradio/HF Space link
+                <ul class="entry-links">
+                  <li><a href="" target="_blank" rel="noopener noreferrer">Repository</a></li>
+                  <li><a href="" target="_blank" rel="noopener noreferrer">Try it</a></li>
+                </ul>
+                -->
+              </div>
+            </article>
+
+            <article class="entry panel">
+              <div class="entry-meta">
+                <p class="entry-kind">Project</p>
+                <p class="entry-date">December 2025</p>
+              </div>
+              <div class="entry-body">
+                <h4>Sentiment on the Line — MBTA</h4>
+                <p class="entry-org">NLP · LLMs · Python</p>
+                <p>
+                  An end-to-end pipeline that collects and cleans Reddit posts about the MBTA,
+                  classifies sentiment, and clusters the topics behind rider frustration.
+                </p>
+                <ul>
+                  <li>Connected sentiment trends to service alerts and weather data to contextualize disruptions.</li>
+                  <li>Used topic and time-based analysis to explore patterns in reliability and communication.</li>
+                </ul>
+                <!-- TODO: add repo and/or writeup link
+                <ul class="entry-links">
+                  <li><a href="" target="_blank" rel="noopener noreferrer">Repository</a></li>
+                  <li><a href="" target="_blank" rel="noopener noreferrer">Writeup</a></li>
+                </ul>
+                -->
+              </div>
+            </article>
           </div>
         </article>
 
-        <article class="timeline-item panel">
-          <div class="timeline-meta">
-            <p class="timeline-date">September 2024 to December 2025</p>
-            <p class="timeline-location">Cambridge, MA</p>
-          </div>
-          <div class="timeline-content">
-            <h3>Data Science Researcher</h3>
-            <p class="timeline-org">MIT Energy Initiative</p>
-            <ul>
-              <li>Built and analyzed distributed energy resource datasets using statistical and machine learning methods to study adoption patterns across solar, storage, EV charging, and related grid technologies.</li>
-              <li>Performed data curation, feature construction, and exploratory analysis on demographic, environmental, and infrastructure variables to support DER-rich grid studies.</li>
-              <li>Developed reproducible workflows for regression, clustering, and synthetic data generation to improve the quality and usability of a novel DER research database.</li>
-            </ul>
-          </div>
-        </article>
+        <!-- ================= THREAD 03 ================= -->
+        <article class="thread" id="teaching">
+          <header class="thread-header">
+            <p class="thread-index">03</p>
+            <h3>Teaching and mentorship</h3>
+            <p class="thread-framing">
+              The part of the work I would keep doing for free: making a hard subject
+              legible to someone who is convinced they are not a "technical person."
+            </p>
+          </header>
 
-        <article class="timeline-item panel">
-          <div class="timeline-meta">
-            <p class="timeline-date">June 2025 to August 2025</p>
-            <p class="timeline-location">Cambridge, MA</p>
-          </div>
-          <div class="timeline-content">
-            <h3>Associate Consultant</h3>
-            <p class="timeline-org">Ratel Consulting</p>
-            <ul>
-              <li>Contributed to a user-facing database project centered on electric vehicle and battery supply chain data, spanning battery cells, production processes, and manufacturer relationships.</li>
-              <li>Worked with SQL, structured datasets, and external stakeholders to support data organization, vendor communication, and business-facing decision-making.</li>
-            </ul>
+          <div class="thread-entries">
+            <article class="entry panel">
+              <div class="entry-meta">
+                <p class="entry-kind">Teaching</p>
+                <p class="entry-date">September 2025 — Present</p>
+                <p class="entry-location">Cambridge, MA</p>
+              </div>
+              <div class="entry-body">
+                <h4>Teaching Assistant</h4>
+                <p class="entry-org">MIT Electrical Engineering and Computer Science Department</p>
+                <ul>
+                  <li>Lead and support a team of about 10 lab assistants who staff office hours, keeping them aligned on course material and common student issues.</li>
+                  <li>Develop and review homework infrastructure by writing test cases, validating assignment code, and improving assignment clarity and usability.</li>
+                </ul>
+              </div>
+            </article>
           </div>
         </article>
       </div>
-    </section>
 
-    <section class="section reveal" id="projects">
-      <div class="section-heading">
-        <p class="section-kicker">Projects</p>
-        <h2>Selected technical work.</h2>
-      </div>
-
-      <div class="project-grid">
-        <article class="project-card panel">
-          <div class="project-media project-media-der" style="background-image: linear-gradient(135deg, rgba(17, 24, 39, 0.18), rgba(11, 78, 93, 0.78)), url('assets/images/output.webp');"></div>
-          <div class="project-copy">
-            <p class="project-date">May 2026 to Present</p>
-            <h3>DER Decision Support Platform</h3>
-            <p class="project-stack">Full-stack · APIs · LLMs · Cloud</p>
-            <p>
-              Building a cloud-based application for exploring distributed energy resources
-              and demographic patterns across regions through an interactive decision-support interface.
-            </p>
-            <ul>
-              <li>Designed backend APIs and data models for regional analysis and predictive insights.</li>
-              <li>Integrated a grounded LLM workflow to generate stakeholder-facing summaries from retrieved project data and model outputs.</li>
-              <li>Implemented testing, deployment workflows, and documentation to support reliability and future extension.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="project-card panel">
-          <div class="project-media project-media-rag"></div>
-          <div class="project-copy">
-            <p class="project-date">March 2026</p>
-            <h3>Retrieval-Augmented Chatbot</h3>
-            <p class="project-stack">Python · Gradio · LLMs · Embeddings</p>
-            <p>
-              Built a retrieval-augmented chatbot that answers questions using a curated
-              knowledge base of personal writing and project materials.
-            </p>
-            <ul>
-              <li>Implemented data cleaning, chunking, embedding-based retrieval, and prompt grounding.</li>
-              <li>Built an interactive Gradio interface suitable for lightweight end-user use.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="project-card panel">
-          <div class="project-media project-media-mbta"></div>
-          <div class="project-copy">
-            <p class="project-date">December 2025</p>
-            <h3>Sentiment on the Line -- MBTA</h3>
-            <p class="project-stack">NLP · LLMs · Python</p>
-            <p>
-              Built an end-to-end pipeline to collect and clean Reddit posts about the MBTA,
-              classify sentiment, and cluster topics around rider frustration.
-            </p>
-            <ul>
-              <li>Connected sentiment trends to service alerts and weather data to contextualize disruptions.</li>
-              <li>Used topic and time-based analysis to explore patterns in reliability and communication.</li>
-            </ul>
-          </div>
-        </article>
+      <!-- ================= EARLIER ================= -->
+      <div class="earlier">
+        <h3 class="earlier-title">Earlier work</h3>
+        <ul class="earlier-list">
+          <li class="earlier-item">
+            <div>
+              <h4>Quantum Image Processing</h4>
+              <p class="earlier-org">Arizona State University, SenSIP Lab</p>
+              <p>
+                Built a quantum-enhanced image processing pipeline using a hybrid 2D Quantum
+                Fourier Transform, benchmarking quantum methods against classical techniques.
+              </p>
+            </div>
+            <a class="earlier-link" href="https://qft.my.canva.site/" target="_blank" rel="noopener noreferrer">
+              Project site
+            </a>
+          </li>
+          <li class="earlier-item">
+            <div>
+              <h4>Auditing Racial Bias in COMPAS</h4>
+              <p class="earlier-org">Inspirit AI · First place</p>
+              <p>
+                Machine learning analysis of racial bias in the COMPAS criminal justice
+                algorithm, using logistic regression, Bernoulli Naive Bayes, and random
+                forests to surface disparities in sentencing predictions.
+              </p>
+            </div>
+            <a class="earlier-link" href="https://docs.google.com/presentation/d/1A_v-qHuE6l08YG8w12SbnDPwyEq6GzY1gdFnIsTwSzg/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
+              Slides
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
 
