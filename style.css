@@ -950,6 +950,12 @@ main,
 
 .skills-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  /* Grid items stretch to the tallest cell in their row by default, which
+     painted half-empty cards once this went from three groups to six: the
+     Specialized panel was 55% blank. Each panel sizes to its own content
+     instead; the row still reserves the tallest height, so the columns stay
+     aligned at the top. */
+  align-items: start;
 }
 
 .skill-panel {
