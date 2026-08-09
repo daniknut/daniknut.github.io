@@ -80,24 +80,33 @@ a {
 
 a:focus-visible,
 button:focus-visible {
-  outline: 3px solid rgba(215, 194, 160, 0.32);
+  outline: 3px solid var(--accent);
   outline-offset: 3px;
 }
 
 h1,
 h2,
 h3,
+h4,
 p,
 ul {
   margin-top: 0;
 }
 
+/* Tracking and leading are set per size, never once for every heading.
+   Large type reads too loose, so it wants negative tracking and tight
+   leading; small type needs neither, and wrapped small headings need room
+   for Fraunces' descenders. Each heading sets its own alongside font-size,
+   because the three are one decision. Optical sizing is on: the loaded
+   Fraunces carries a 9..144 opsz axis. */
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: "Fraunces", Georgia, serif;
-  line-height: 1.04;
-  letter-spacing: -0.02em;
+  font-optical-sizing: auto;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
 }
 
 main,
@@ -312,6 +321,8 @@ main,
   max-width: 9ch;
   margin-bottom: 1rem;
   font-size: clamp(3.5rem, 7vw, 6.5rem);
+  line-height: 1.02;
+  letter-spacing: -0.028em;
   text-wrap: balance;
 }
 
@@ -557,6 +568,8 @@ main,
   max-width: 42rem;
   margin-bottom: 0;
   font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.08;
+  letter-spacing: -0.018em;
 }
 
 .section-kicker {
@@ -684,6 +697,8 @@ main,
 
 .thread-header h3 {
   font-size: clamp(1.5rem, 2.6vw, 2rem);
+  line-height: 1.12;
+  letter-spacing: -0.012em;
   margin-bottom: 0.55rem;
 }
 
@@ -761,17 +776,12 @@ main,
   margin-bottom: 0;
 }
 
-.entry-body h4 {
-  margin: 0 0 0.35rem;
-  font-family: "Fraunces", Georgia, serif;
-  font-size: 1.5rem;
-  line-height: 1.04;
-  letter-spacing: -0.02em;
-}
-
+.entry-body h4,
 .skill-panel h3 {
+  margin: 0 0 0.35rem;
   font-size: 1.5rem;
-  margin-bottom: 0.35rem;
+  line-height: 1.18;
+  letter-spacing: -0.008em;
 }
 
 .entry-org {
@@ -869,6 +879,8 @@ main,
 .earlier-title {
   margin-bottom: 1.1rem;
   font-size: 1.25rem;
+  line-height: 1.25;
+  letter-spacing: -0.005em;
   color: var(--muted-soft);
 }
 
@@ -894,8 +906,9 @@ main,
 
 .earlier-item h4 {
   margin: 0 0 0.3rem;
-  font-family: "Fraunces", Georgia, serif;
   font-size: 1.2rem;
+  line-height: 1.25;
+  letter-spacing: -0.005em;
 }
 
 .earlier-org {
@@ -1011,6 +1024,86 @@ main,
   transform: translateY(0);
 }
 
+/* ---------- Press feedback ---------- */
+
+/* Feedback belongs on pointer-down, not on release. Everything interactive
+   here previously responded only to :hover, which does not exist on touch,
+   so tapping anything on a phone produced nothing at all until the page
+   moved. .is-pressed is set from a pointerdown handler in script.js because
+   iOS Safari applies :active inconsistently; :active covers everything else
+   and keyboard activation. */
+.button,
+.nav-link,
+.nav-toggle,
+.brand-mark,
+.skip-link,
+.contact-strip a,
+.contact-grid a,
+.entry-links a,
+.earlier-link {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.button:active,
+.button.is-pressed,
+.contact-strip a:active,
+.contact-strip a.is-pressed,
+.contact-grid a:active,
+.contact-grid a.is-pressed,
+.entry-links a:active,
+.entry-links a.is-pressed,
+.earlier-link:active,
+.earlier-link.is-pressed,
+.skip-link:active,
+.skip-link.is-pressed {
+  transform: scale(0.97);
+  transition-duration: 100ms;
+}
+
+.brand-mark:active,
+.brand-mark.is-pressed,
+.nav-toggle:active,
+.nav-toggle.is-pressed {
+  transform: scale(0.92);
+  transition-duration: 100ms;
+}
+
+.nav-link:active,
+.nav-link.is-pressed {
+  color: var(--text);
+  transform: scale(0.94);
+  transition-duration: 100ms;
+}
+
+.brand-mark,
+.nav-link {
+  transition: transform 180ms ease, color 180ms ease;
+}
+
+/* Inline links inside running text: scaling a span of text reads as a
+   glitch, so these get a tonal press instead. */
+.fact-value a {
+  transition: color 180ms ease, text-decoration-color 180ms ease;
+}
+
+.fact-value a:active,
+.fact-value a.is-pressed {
+  color: #f0dcb8;
+  transition-duration: 100ms;
+}
+
+/* These had no transition at all, so a press would have snapped in and out. */
+.contact-strip a,
+.earlier-link,
+.skip-link {
+  transition: transform 180ms ease, color 180ms ease, border-color 180ms ease;
+}
+
+/* Reduced motion means a gentler equivalent, not the absence of feedback.
+   Movement goes; the opacity and colour changes that tell you something
+   happened stay, which is why this restricts transition-property rather
+   than flattening every duration to zero. */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -1021,14 +1114,116 @@ main,
   *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+    transition-property: opacity, color, background-color, border-color,
+      text-decoration-color, box-shadow, outline-color !important;
+    transition-duration: 180ms !important;
     scroll-behavior: auto !important;
   }
 
-  .reveal,
+  .reveal {
+    opacity: 0;
+    transform: none;
+  }
+
   .reveal.is-visible {
     opacity: 1;
     transform: none;
+  }
+
+  /* Press still needs to register, so it becomes tonal instead of physical. */
+  [class].is-pressed,
+  .button:active,
+  .nav-link:active,
+  .nav-toggle:active,
+  .brand-mark:active,
+  .skip-link:active,
+  .contact-strip a:active,
+  .contact-grid a:active,
+  .entry-links a:active,
+  .earlier-link:active {
+    transform: none !important;
+    opacity: 0.72;
+  }
+}
+
+/* Translucency is decorative here, so it can be traded for legibility
+   without losing any structure. */
+@media (prefers-reduced-transparency: reduce) {
+  :root {
+    --surface: #101f36;
+  }
+
+  .site-header {
+    background: #071627;
+    backdrop-filter: none;
+  }
+
+  .site-nav {
+    background: #12243d;
+  }
+
+  .hero-copy {
+    background: #0c1b30;
+    backdrop-filter: none;
+  }
+
+  .hero-shell {
+    background: #0d1c31;
+  }
+
+  .portrait-frame {
+    background: #11203a;
+  }
+
+  .prose-panel,
+  .facts-panel,
+  .skill-panel,
+  .contact-panel,
+  .entry {
+    background: #101f36;
+  }
+
+  .metric-chip,
+  .tag-list li,
+  .contact-strip a,
+  .contact-grid a,
+  .earlier-item,
+  .entry-kind {
+    background: #16273f;
+  }
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --text: #ffffff;
+    --muted: #f4e7d0;
+    --muted-soft: #dde6f2;
+    --line: rgba(244, 239, 230, 0.38);
+    --line-strong: rgba(244, 239, 230, 0.55);
+  }
+
+  .prose-panel p,
+  .section-intro,
+  .thread-framing,
+  .hero-summary,
+  .entry-body > p:not(.entry-org),
+  .earlier-item p:last-of-type {
+    color: #eef3fa;
+  }
+
+  .metric-chip,
+  .tag-list li,
+  .contact-strip a,
+  .contact-grid a,
+  .earlier-item,
+  .entry-kind,
+  .entry {
+    border-color: rgba(244, 239, 230, 0.45);
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    outline-width: 4px;
   }
 }
 
